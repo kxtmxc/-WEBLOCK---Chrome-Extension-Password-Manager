@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <h1>WEBLOCK</h1>
+  <div class="input-group">
+    <input type="text" id="username" placeholder="Username">
+    <div class="options">
+      <div class="option">
+        <label class="switch">
+          <input type="checkbox" id="useAlphabets" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="option-text">Alphabets</span>
+      </div>
+      <div class="option">
+        <label class="switch">
+          <input type="checkbox" id="useNumbers" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="option-text">Numbers</span>
+      </div>
+      <div class="option">
+        <label class="switch">
+          <input type="checkbox" id="useSpecial" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="option-text">Special Characters</span>
+      </div>
+    </div>
+    <button id="generate">Generate Password</button>
+    <button id="save">Save</button>
+  </div>
+  
+  <h2>Saved Logins</h2>
+  <button id="show">Show Saved Logins</button>
+  <div id="login-table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Website</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="loginList">
+        <!-- Login items will be added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Key Modal -->
+  <div id="keyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Keep this key safe, you will need it to get your password and log in next time.</p>
+      <textarea id="keyText" readonly></textarea>
+      <button id="copyButton">Copy Key</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
